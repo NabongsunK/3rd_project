@@ -1,0 +1,67 @@
+.App.a1 {
+  --my--thema: rgb(209, 241, 156);
+}
+
+.App.a2 {
+  --my--thema: rgb(247, 157, 156);
+}
+
+.App.a3 {
+  --my--thema: rgb(231, 187, 252);
+}
+
+.App.a4 {
+  --my--thema: rgb(211, 113, 211);
+}
+
+.App.a5 {
+  --my--thema: rgb(249, 197, 138);
+}
+
+.App.a6 {
+  --my--thema: rgb(250, 214, 55);
+}
+
+.App.a7 {
+  --my--thema: rgb(253, 238, 177);
+}
+
+.App.a8 {
+  --my--thema: rgb(191, 218, 253);
+}
+
+.App.a9 {
+  --my--thema: rgb(168, 255, 255);
+}
+
+.App.a10 {
+  --my--thema: rgb(65, 160, 224);
+}
+
+.App.dark {
+  --my--background: #393c42;
+  --my--text: #f7f7f7;
+  --my--heading: var(--my--thema);
+}
+
+html,
+body,
+iframe,
+.App {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  background: var(--my--background);
+}
+
+.App * {
+  transition: all 0.3s;
+}
+
+/* 
+---------------------------------------------
+Header Style
+--------------------------------------------- 
+*/
