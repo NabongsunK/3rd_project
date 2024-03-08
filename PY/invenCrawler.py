@@ -26,7 +26,7 @@ else:
     latest_title = None
 
 db = []
-for i in range(1, 4):
+for i in range(1, 50):
     url = "https://www.inven.co.kr/board/lostark/4811?my=chu&p="+str(i)
     response = requests.get(url)
     source = response.text
