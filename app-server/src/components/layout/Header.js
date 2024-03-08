@@ -22,83 +22,64 @@ function Header({ logOut }) {
 
   return (
     <>
-      <header className="header-area">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <nav className="main-nav">
-                <Link to="/" className="logo">
-                  <img
-                    className="logo_mark"
-                    src={`/assets/images/logo/logo_mark_mycolor${thema}.png`}
-                    alt=""
-                  />
-                  <img
-                    className="logo_name logo_off"
-                    src={`/assets/images/logo/logo_name_mycolor${thema}-hover.png`}
-                    alt=""
-                  />
-                  <img
-                    className="logo_hover logo_on"
-                    src={`/assets/images/logo/logo_name_mycolor${thema}.png`}
-                    alt=""
-                  />
-                </Link>
-                <div style={{ color: "#fff" }}>{name}</div>
-                <ul className="nav">
-                  <li
-                    className="ripple"
-                    style={is_signed ? {} : { display: "none" }}
-                  >
-                    <Link onClick={logOut}>로그아웃</Link>
-                  </li>
-                  <li
-                    className="ripple"
-                    style={is_manager ? {} : { display: "none" }}
-                  >
-                    <Link to="/adminlist/0">관리자 목록</Link>
-                  </li>
-                  <li className="ripple">
-                    <Link to="/">홈</Link>
-                  </li>
-                  <li className="ripple">
-                    <Link to="/capture">카드 만들기</Link>
-                  </li>
-                  <li className="ripple">
-                    <Link to="/list">카드 목록</Link>
-                  </li>
-                  <li className="ripple">
-                    <Link to="/notice">공지</Link>
-                  </li>
-                </ul>
-                <Link className="menu-trigger" onClick={menuToggle}>
-                  <span>Menu</span>
-                </Link>
+      <header className="header-area container">
+        <div className="row">
+          <div className="main-nav col-12">
+            <Link to="/" className="logo">
+              <img
+                className="logo_mark"
+                src={`/assets/images/logo/logo_mark_mycolor${thema}.png`}
+                alt=""
+              />
+              <img
+                className="logo_name logo_off"
+                src={`/assets/images/logo/logo_name_mycolor${thema}-hover.png`}
+                alt=""
+              />
+              <img
+                className="logo_hover logo_on"
+                src={`/assets/images/logo/logo_name_mycolor${thema}.png`}
+                alt=""
+              />
+            </Link>
+            <ul className="nav">
+              <li className="ripple">
+                <Link to="/">홈</Link>
+              </li>
+              <li className="ripple">
+                <Link to="/capture">카드 만들기</Link>
+              </li>
+              <li className="ripple">
+                <Link to="/list">카드 목록</Link>
+              </li>
+              <li className="ripple">
+                <Link to="/notice">공지</Link>
+              </li>
+            </ul>
+            <Link className="menu-trigger" onClick={menuToggle}>
+              <span>Menu</span>
+            </Link>
 
-                {/* <DarkToggle
+            {/* <DarkToggle
                   valueRef={isDark}
                   setValueRef={(e) => {
                     dispatch(setIsDark({ newIsDark: e }));
                   }}
                   options={["light", "dark"]}
                 /> */}
-                <div
-                  className={`myThema ${
-                    isThemaOpen ? "open" : "closed"
-                  } a${thema}`}
-                  onClick={(event) => {
-                    event.stopPropagation();
-                    dispatch(setIsThemaOpen({ newIsThemaOpen: false }));
-                  }}
-                >
-                  <div className="myThemaIn"></div>
-                </div>
-                {/* <ThemaToggle
+            <div
+              className={`myThema ${isThemaOpen ? "open" : "closed"} a${thema}`}
+              onClick={(event) => {
+                event.stopPropagation();
+                dispatch(setIsThemaOpen({ newIsThemaOpen: false }));
+              }}
+            >
+              <div className="myThemaIn"></div>
+            </div>
+            {/* <ThemaToggle
                   options={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
                   colorToggle={true}
                 /> */}
-              </nav>
-            </div>
           </div>
         </div>
       </header>
